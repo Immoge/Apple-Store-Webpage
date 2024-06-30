@@ -1,0 +1,41 @@
+.data-grid {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  
+  .data-grid th, .data-grid td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .data-grid th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .data-grid button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .even-row {
+    background-color: #f9f9f9;
+  }
+  
+  .expanded-row td {
+    padding: 0;
+    border-top: none;
+  }
+  
+  .expanded-content {
+    padding: 10px 10px 10px 0;
+    margin-left: 20px;
+  }
+  
+  .expanded-content p {
+    margin: 10px 0;
+  }
