@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
 
@@ -10,16 +10,17 @@ import { Product } from '../../models/product.model';
 export class ProductSelectionComponent implements OnInit {
   products: Product[] = [];
   filteredProducts: Product[] = [];
-  selectedSize: string = 'All';
+  selectedSize: string = '14-inch';
   selectedChip: string = 'All';
+  isScrolledDown: boolean = false;
+
+  @ViewChild('sizeButtonSection') sizeButtonSection!: ElementRef;
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
       this.products = data;
-      this.selectedSize = '14-inch'; 
-      this.selectedChip = 'All'; 
       this.filterProducts();
     });
   }
@@ -39,5 +40,10 @@ export class ProductSelectionComponent implements OnInit {
   selectChip(chip: string): void {
     this.selectedChip = chip;
     this.filterProducts();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any): void {
+    this.isScrolledDown = window.pageYOffset > this.sizeButtonSection.nativeElement.offsetTop;
   }
 }

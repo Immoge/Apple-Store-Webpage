@@ -1,4 +1,52 @@
-.global-margin {
-    margin-left: 200px;  
-    margin-right: 200px; 
+
+@media (max-width: 767px) {
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
   }
+
+  .global-margin {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  .max-w-screen-xl {
+    max-width: 100%;
+  }
+
+  nav.hidden {
+    display: none;
+  }
+
+  nav.md\:flex {
+    display: none;
+  }
+
+  .flex.justify-between {
+    justify-content: space-between;
+  }
+
+  .text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  .relative:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1280px) {
+}
