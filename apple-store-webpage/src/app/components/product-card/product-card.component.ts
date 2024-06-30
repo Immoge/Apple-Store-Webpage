@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../../models/product.model';
-import { PopoutService } from '../../services/popout.service'; // Ensure correct path
+import { PopoutService } from '../../services/popout.service'; 
 
 @Component({
   selector: 'app-product-card',

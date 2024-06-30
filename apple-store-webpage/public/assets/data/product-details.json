@@ -1,0 +1,202 @@
+[
+    {
+      "id": "1",
+      "name":"14‑inch MacBook Pro - Space Grey",
+      "price": 7499,
+      "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+      "size": "14-inch",
+      "features": [
+        "Apple M3 chip with 8-core CPU, 10-core GPU, 16-core Neural Engine",
+        "8GB unified memory",
+        "512GB SSD storage",
+        "14-inch Liquid Retina XDR display",
+        "70W USB-C Power Adapter",
+        "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Backlit Magic Keyboard with Touch ID - US English"
+      ],
+      "chip": "Apple M3 chip with 8-core CPU, 10-core GPU, 16-core Neural Engine",
+      "memory":"8GB",
+      "storage": "512GB",
+      "powerAdapter": "70W USB-C Power Adapter"
+    },
+    {
+        "id": "2",
+        "name":"14‑inch MacBook Pro - Space Grey",
+        "price": 8299,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "14-inch",
+        "features": [
+          "Apple M3 chip with 8-core CPU, 10-core GPU, 16-core Neural Engine",
+          "8GB unified memory",
+          "1TB SSD storage",
+          "14-inch Liquid Retina XDR display",
+          "70W USB-C Power Adapter",
+          "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 chip with 8-core CPU, 10-core GPU, 16-core Neural Engine",
+        "memory":"8GB",
+        "storage": "1TB",
+        "powerAdapter": "70W USB-C Power Adapter"
+      },
+      {
+        "id": "3",
+        "name":"14‑inch MacBook Pro - Space Grey",
+        "price": 9099,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "14-inch",
+        "features": [
+          "Apple M3 chip with 8-core CPU, 10-core GPU, 16-core Neural Engine",
+          "16GB unified memory",
+          "1TB SSD storage",
+          "14-inch Liquid Retina XDR display",
+          "70W USB-C Power Adapter",
+          "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 chip with 8-core CPU, 10-core GPU, 16-core Neural Engine",
+        "memory":"16GB",
+        "storage": "1TB",
+        "powerAdapter": "70W USB-C Power Adapter"
+      },
+      {
+        "id": "4",
+        "name":"14‑inch MacBook Pro - Space Black",
+        "price": 9999,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "14-inch",
+        "features": [
+          "Apple M3 Pro chip with 11‑core CPU, 14‑core GPU and 16‑core Neural Engine",
+          "18GB unified memory",
+          "512GB SSD storage",
+          "14-inch Liquid Retina XDR display",
+          "70W USB-C Power Adapter",
+          "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 Pro chip with 11‑core CPU, 14‑core GPU and 16‑core Neural Engine",
+        "memory":"24GB",
+        "storage": "512GB",
+        "powerAdapter": "70W USB-C Power Adapter"
+      },
+      {
+        "id": "5",
+        "name":"14‑inch MacBook Pro - Space Black",
+        "price": 11599,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "14-inch",
+        "features": [
+          "Apple M3 Pro chip with 12‑core CPU, 18‑core GPU and 16‑core Neural Engine",
+          "18GB unified memory",
+          "1TB SSD storage",
+          "14-inch Liquid Retina XDR display",
+          "96W USB-C Power Adapter",
+          "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 Pro chip with 12‑core CPU, 18‑core GPU and 16‑core Neural Engine",
+        "memory":"18GB",
+        "storage": "1TB",
+        "powerAdapter": "96W USB-C Power Adapter"
+      },
+      {
+        "id": "6",
+        "name":"14‑inch MacBook Pro - Space Black",
+        "price": 14799,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "14-inch",
+        "features": [
+          "Apple M3 Max chip with 14‑core CPU, 30‑core GPU and 16‑core Neural Engine",
+          "36GB unified memory",
+          "1TB SSD storage",
+          "14-inch Liquid Retina XDR display",
+          "96W USB-C Power Adapter",
+          "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 Max chip with 14‑core CPU, 30‑core GPU and 16‑core Neural Engine",
+        "memory":"36GB",
+        "storage": "1TB",
+        "powerAdapter": "96W USB-C Power Adapter"
+      },
+      {
+        "id": "7",
+        "name":"16‑inch MacBook Pro - Space Black",
+        "price": 11999,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "16-inch",
+        "features": [
+          "Apple M3 Pro chip with 12‑core CPU, 18‑core GPU and 16‑core Neural Engine",
+          "18GB unified memory",
+          "512GB SSD storage",
+          "16-inch Liquid Retina XDR display",
+          "140W USB-C Power Adapter",
+          "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 Pro chip with 12‑core CPU, 18‑core GPU and 16‑core Neural Engine",
+        "memory":"18GB",
+        "storage": "512GB",
+        "powerAdapter": "140W USB-C Power Adapter"
+      },
+      {
+        "id": "8",
+        "name":"16‑inch MacBook Pro - Space Black",
+        "price": 13599,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "16-inch",
+        "features": [
+          "Apple M3 Pro chip with 12‑core CPU, 18‑core GPU and 16‑core Neural Engine",
+          "36GB unified memory",
+          "512GB SSD storage",
+          "16-inch Liquid Retina XDR display",
+          "140W USB-C Power Adapter",
+          "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 Pro chip with 12‑core CPU, 18‑core GPU and 16‑core Neural Engine",
+        "memory":"36GB",
+        "storage": "512GB",
+        "powerAdapter": "140W USB-C Power Adapter"
+      },
+      {
+        "id": "9",
+        "name":"16‑inch MacBook Pro - Space Black",
+        "price": 15999,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "16-inch",
+        "features": [
+          "Apple M3 Max chip with 14‑core CPU, 30‑core GPU and 16‑core Neural Engine",
+          "36GB unified memory",
+          "1TB SSD storage",
+          "16-inch Liquid Retina XDR display",
+          "140W USB-C Power Adapter",
+          "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 Max chip with 14‑core CPU, 30‑core GPU and 16‑core Neural Engine",
+        "memory":"36GB",
+        "storage": "1TB",
+        "powerAdapter": "140W USB-C Power Adapter"
+      },
+      {
+        "id": "10",
+        "name":"16‑inch MacBook Pro - Space Black",
+        "price": 17999,
+        "imageUrl": "assets/images/macbook-pro-black-14.jpeg",
+        "size": "16-inch",
+        "features": [
+          "Apple M3 Max chip with 16‑core CPU, 40‑core GPU and 16‑core Neural Engine",
+          "48GB unified memory",
+          "1TB SSD storage",
+          "16-inch Liquid Retina XDR display",
+          "140W USB-C Power Adapter",
+          "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+          "Backlit Magic Keyboard with Touch ID - US English"
+        ],
+        "chip": "Apple M3 Max chip with 16‑core CPU, 40‑core GPU and 16‑core Neural Engine",
+        "memory":"38GB",
+        "storage": "1TB",
+        "powerAdapter": "140W USB-C Power Adapter"
+      }
+  ]

@@ -1,0 +1,259 @@
+<div>
+  <div class="bg-gray-100 text-xs text-center mb-12 py-4">
+    <span>Pay 0% interest for up to 24 months. Terms apply.<span class="small-symbols">◊◊</span><a href="#"
+        class="text-blue-600 hover:underline"> Learn more ></a></span>
+  </div>
+
+  <div class="global-margin">
+    <div class="container mx-auto p-4">
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <div class="md:w-1/2 flex flex-col">
+          <div class="sticky-content" style="position: sticky; top: 1px;">
+            <img [src]="productDetail.imageUrl" alt="{{ productDetail.id }}" class="w-full items-start">
+            <div class="mt-4 text-center">
+              <a href="#" class="text-blue-600 hover:underline flex items-center justify-center">
+                View gallery
+                <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+              </a>
+            </div>
+            <div class="mt-4 flex justify-around">
+              <div class="flex flex-col items-center mt-8">
+                <img src="assets/images/box.png" alt="box icon" class="w-8 h-8">
+                <span>Free delivery</span>
+              </div>
+              <div class="flex flex-col items-center mt-8">
+                <img src="assets/images/return-box.png" alt="return box icon" class="w-8 h-8">
+                <span>Free and easy returns</span>
+              </div>
+            </div>
+            <div class="mt-8 text-center">
+              <span>Have questions about buying a Mac?</span>
+            </div>
+            <div class="text-center">
+              <a href="https://contactretail.apple.com/" class="text-blue-600 hover:underline">Chat with a Mac
+                Specialist ></a>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="mt-4">
+            <h1 class="text-4xl font-medium">Customize your {{ productDetail.name }}</h1>
+            <ul class="list-none mt-4 space-y-3 text-xs">
+              <li *ngFor="let feature of productDetail.features">{{ feature }}</li>
+            </ul>
+            <hr class="my-4 border-b border-gray-300">
+          </div>
+          <div class="mt-4">
+            <h2 class="text-xl text-xs font-medium">Add a trade-in</h2>
+            <p class="text-xl text-xs mt-4">Get credit towards a new Mac when you trade in your eligible computer. Or
+              recycle it for free.**</p>
+            <a href="#" class="text-blue-600 hover:underline text-sm flex items-center mt-2 mb-4">
+              Get started
+              <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+            </a>
+          </div>
+          <hr class="my-4 border-b border-gray-300">
+          <div class="mt-4">
+            <h2 class="text-2xl font-medium text-left">Memory</h2>
+            <a href="#" class="text-blue-600 hover:underline text-lg flex items-center mt-2 mb-4">
+              How much memory is right for you?
+              <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+            </a>
+            <div class="space-y-4 -ml-4">
+              <button *ngFor="let option of memoryOptions" (click)="selectMemoryOption(option)"
+                [class.border-blue-500]="selectedMemoryOption === option.label"
+                [class.text-blue-500]="selectedMemoryOption === option.label"
+                class="w-full h-16 border-2 py-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mx-4 text-lg font-medium text-left flex justify-between items-center px-4"
+                [ngClass]="{ 'border-gray-400': selectedMemoryOption !== option.label }">
+                <span [class.text-black]="selectedMemoryOption === option.label">{{ option.label }}</span>
+                <span *ngIf="selectedMemoryOption !== option.label" class="text-lg text-black">{{
+                  getMemoryOptionPrice(option) }}</span>
+              </button>
+            </div>
+          </div>
+          <div class="mt-4">
+            <h2 class="text-2xl font-medium text-left">Storage</h2>
+            <a href="#" class="text-blue-600 hover:underline text-lg flex items-center mt-2 mb-4">
+              How much storage is right for you?
+              <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+            </a>
+            <div class="space-y-4 -ml-4">
+              <button *ngFor="let option of storageOptions" (click)="selectStorageOption(option)"
+                [class.border-blue-500]="selectedStorageOption === option.label"
+                [class.text-blue-500]="selectedStorageOption === option.label"
+                class="w-full h-16 border-2 py-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mx-4 text-lg font-medium text-left flex justify-between items-center px-4"
+                [ngClass]="{ 'border-gray-400': selectedStorageOption !== option.label }">
+                <span [class.text-black]="selectedStorageOption === option.label">{{ option.label }}</span>
+                <span *ngIf="selectedStorageOption !== option.label" class="text-lg text-black">{{
+                  getStorageOptionPrice(option) }}</span>
+              </button>
+            </div>
+          </div>
+          <div *ngIf="productDetail.powerAdapter === '70W USB-C Power Adapter'" class="mt-4">
+            <h2 class="text-2xl font-medium text-left">Adapter</h2>
+            <a href="#" class="text-blue-600 hover:underline text-lg flex items-center mt-2 mb-4">
+              Which power adapter is right for you?
+              <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+            </a>
+            <div class="space-y-4 -ml-4">
+              <button *ngFor="let option of adapterOptions" (click)="selectAdapterOption(option)"
+                [class.border-blue-500]="selectedAdapterOption === option.label"
+                [class.text-blue-500]="selectedAdapterOption === option.label"
+                class="w-full h-16 border-2 py-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mx-4 text-lg font-medium text-left flex justify-between items-center px-4"
+                [ngClass]="{ 'border-gray-400': selectedAdapterOption !== option.label }">
+                <span [class.text-black]="selectedAdapterOption === option.label">{{ option.label }}</span>
+                <span *ngIf="selectedAdapterOption !== option.label" class="text-lg text-black">{{
+                  getAdapterOptionPrice(option) }}</span>
+              </button>
+            </div>
+          </div>
+          <div class="mt-4">
+            <h2 class="text-2xl font-medium text-left">Keyboard Language</h2>
+            <a href="#" class="text-blue-600 hover:underline text-lg flex items-center mt-2 mb-4">
+              Learn more
+              <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+            </a>
+            <div>
+              <select class="w-full border-2 border-gray-400 rounded-lg p-4 mb-8">
+                <option value="" disabled selected>Keyboard Language</option>
+                <option value="us-english">Backlit Magic Keyboard with Touch ID - US English</option>
+                <option value="chinese-pinyin">Backlit Magic Keyboard with Touch ID - Chinese (Pinyin)</option>
+                <option value="chinese-zhuyin">Backlit Magic Keyboard with Touch ID - Chinese (Zhuyin)</option>
+                <option value="arabic">Backlit Magic Keyboard with Touch ID - Arabic</option>
+                <option value="japanese">Backlit Magic Keyboard with Touch ID - Japanese</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="bg-gray-100 p-4 mb-4">
+              <h3 class="text-lg font-medium">Need a moment?</h3>
+              <p class="text-sm">Keep all your selections by saving this device to Your Saves, then come back anytime
+                and pick up right where you left off.</p>
+              <a href="#" class="text-blue-600 hover:underline text-sm flex items-center mt-2">
+                <img src="assets/images/save-icon.png" alt="save-icon" class="mr-1 w-4 h-4">
+                Save for later
+              </a>
+            </div>
+          </div>
+          <div class="mb-20"></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <img src="assets/images/apple-tv.jpeg" alt="Apple TV Image" style="height: 400px;" class="w-full">
+    </div>
+  </div>
+  <div class="additional-info text-left bg-gray-100 mt-4">
+    <div class="global-margin">
+      <p class="mb-2">* Monthly pricing is after purchase using credit card interest at 0% pa over a 24-month tenure.
+        Monthly pricing is rounded to the nearest ringgit and displayed for each product added in the order. Exact
+        pricing will be for the whole order and provided by your bank subject to your bank’s terms and conditions.</p>
+      <p class="mb-2 font-medium">◊◊◊ Terms & Conditions of 0% interest for 6-, 12- and 24-month instalment payment
+        plans</p>
+      <p class="mb-2">0% interest instalment payment plans are available to qualified Malaysia residents and provided by
+        participating banks. To qualify for the 0% interest for 6-, 12- or 24-month instalment offers, your purchase
+        minimum value must be MYR 2,000 or more in a single transaction. All purchases on 0% interest instalment plans
+        are subject to approval by your credit card issuer. Refer to your credit card issuer’s website for conditions,
+        fees and charges.</p>
+      <p class="mb-2">Instalment offers are only available to individual customers using consumer credit cards. Apple
+        Employee EPP orders, Education Store orders, business purchases and institutional purchases are not eligible for
+        this offer. Only Visa and Mastercard credit cards are eligible for this offer. If your instalment order is not
+        approved by your credit card issuer, we will not be informed of the reason. Please contact your credit card
+        issuer for further information. Purchases will be billed to your account upon order placement. Offer is
+        available on advertised or ticketed price.</p>
+      <p class="mb-2">The information is current as of 24 May 2024.</p>
+      <p class="mb-2">** Trade-in service is provided by Apple’s trade-in partners. Trade-in value quotes are estimated
+        only and actual values may be lower than the estimation. Trade-in values vary based on the condition, year and
+        model of your trade-in device. Not all devices are eligible for credit. You must be at least the age of majority
+        to be eligible to trade in for credit. Trade-in value may be applied towards qualifying new device purchase.
+        Actual value awarded is based on receipt of a qualifying device matching the description provided when the
+        estimate was made. Apple’s trade-in partners reserve the right to refuse, cancel or limit quantity of any
+        trade-in transaction for any reason. More details are available from Apple’s trade-in partner for trade-in and
+        recycling of eligible devices. Restrictions and limitations may apply. For recycling eligible equipment Terms
+        and restrictions may apply.</p>
+      <p class="mb-2">1. 1GB = 1 billion bytes and 1TB = 1 trillion bytes; actual formatted capacity less.</p>
+      <p class="mb-2">2. The displays on the 14-inch and 16-inch MacBook Pro have rounded corners at the top. When
+        measured as a standard rectangular shape, the screens are 14.2 inches and 16.2 inches diagonally (actual
+        viewable area is less).</p>
+      <p class="mb-2">3. Testing conducted by Apple in September and October 2023 using pre-production 14-inch MacBook
+        Pro systems with Apple M3 Pro, 12-core CPU, 18-core GPU, 36GB of RAM and 4TB SSD. Final Cut Pro 10.6.9 tested
+        using a 1-minute picture-in-picture project with multiple streams of Apple ProRes 422 video at 8192x4320
+        resolution and 30 frames per second, as well as a 1-minute picture-in-picture project with multiple streams of
+        Apple ProRes 422 video at 3840x2160 resolution and 29.97 frames per second. Performance tests are conducted
+        using specific computer systems and reflect the approximate performance of MacBook Pro.</p>
+      <p class="mb-2">4. Testing conducted by Apple in September and October 2023 using pre-production 14-inch MacBook
+        Pro systems with Apple M3 Max, 16-core CPU, 40-core GPU, 128GB of RAM and 8TB SSD. Final Cut Pro 10.6.9 tested
+        using a 1-minute picture-in-picture project with multiple streams of Apple ProRes 422 video at 8192x4320
+        resolution and 30 frames per second, as well as a 1-minute picture-in-picture project with multiple streams of
+        Apple ProRes 422 video at 3840x2160 resolution and 29.97 frames per second. Performance tests are conducted
+        using specific computer systems and reflect the approximate performance of MacBook Pro.</p>
+      <p class="mb-2">5. Testing conducted by Apple in September and October 2023 using pre-production 16-inch MacBook
+        Pro systems with Apple M3 Pro, 12-core CPU, 18-core GPU, 36GB of RAM and 512GB SSD, and pre-production 14-inch
+        MacBook Pro systems with Apple M3 Pro, 12-core CPU, 18-core GPU, 18GB of RAM and 1TB SSD. 16-inch MacBook Pro
+        systems tested with Apple 140W USB-C Power Adapter (Model A2452), and 14-inch MacBook Pro systems tested with
+        Apple 96W USB-C Power Adapter (Model A2166), both with USB-C to MagSafe 3 Cable (Model A2363). Fast-charge
+        testing conducted with drained MacBook Pro units. Charge time varies with settings and environmental factors;
+        actual results will vary.</p>
+      <p class="mb-2">6. Testing conducted by Apple in September and October 2023 using pre-production 16-inch MacBook
+        Pro systems with Apple M3 Pro, 12-core CPU, 18-core GPU, 36GB of RAM and 4TB SSD. Final Cut Pro 10.6.9 tested
+        using a 1-minute picture-in-picture project with multiple streams of Apple ProRes 422 video at 8192x4320
+        resolution and 30 frames per second, as well as a 1-minute picture-in-picture project with multiple streams of
+        Apple ProRes 422 video at 3840x2160 resolution and 29.97 frames per second. Performance tests are conducted
+        using specific computer systems and reflect the approximate performance of MacBook Pro.</p>
+      <p class="mb-4">7. Testing conducted by Apple in September and October 2023 using pre-production 16-inch MacBook
+        Pro systems with Apple M3 Max, 16-core CPU, 40-core GPU, 128GB of RAM and 8TB SSD. Final Cut Pro 10.6.9 tested
+        using a 1-minute picture-in-picture project with multiple streams of Apple ProRes 422 video at 8192x4320
+        resolution and 30 frames per second, as well as a 1-minute picture-in-picture project with multiple streams of
+        Apple ProRes 422 video at 3840x2160 resolution and 29.97 frames per second. Performance tests are conducted
+        using specific computer systems and reflect the approximate performance of MacBook Pro.</p>
+      <p class="mb-2">*** Apple TV+ offer available to new and qualified returning subscribers only. RM 29.90/month
+        after free trial. Only one offer per Apple ID and only one offer per family if you’re part of a Family Sharing
+        group, regardless of the number of devices that you or your family purchase. This offer is not available if you
+        or your Family have previously accepted an Apple TV+ three-months-free or one-year-free offer. Offer valid for
+        three months after eligible device is activated. Plan automatically renews until cancelled. Restrictions and
+        other <a href="https://www.apple.com/my/shop/browse/home/back_to_school/terms_conditions"
+          class="text-black underline font-normal">terms</a> apply.</p>
+      <p>^ New subscribers only. RM 29.90/month after free trial. Plan automatically renews after trial until cancelled.
+      </p>
+      <p>We use your location to show you delivery options faster. We found your location using your IP address or
+        because you entered it during a previous visit to Apple.</p>
+    </div>
+  </div>
+  <div class="fixed bottom-0 left-0 right-0 bg-gray-100 shadow-lg py-6 z-50 border-t">
+    <div class="price-margin">
+        <div class="container flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-2">
+            <div class="flex items-start space-x-4">
+                <img src="assets/images/lorry-icon.png" alt="icon" class="w-6 h-6">
+                <div class="text-sm">
+                    <span>Order today. Delivers to <a href="#" class="text-blue-600 underline text-center">55188</a></span>
+                    <br>
+                    <span><strong>09/07/2024 - 10/07/2024 — Free</strong> at</span>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4">
+                <img src="assets/images/apple-bag-icon.jpeg" alt="icon" class="w-6 h-6">
+                <div class="text-sm">
+                    <span>Order now, pick up in store:</span>
+                    <br>
+                    <span><strong>Wed 10/07/2024</strong> at</span>
+                    <br>
+                    <a href="#" class="text-blue-600 underline text-center">Apple The Exchange TRX</a>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4 justify-end">
+                <div class="text-2xl font-medium text-right">
+                    RM {{ totalPrice.toFixed(2) }} <br />
+                    RM {{ monthlyInstallment.toFixed(2) }}/mo. for 24 mo.*
+                    <div class="text-sm text-right flex justify-end items-center mt-2 mb-4">
+                        <a href="#" class="text-blue-600 hover:underline">Explore monthly installment options</a>
+                        <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center">Add to Bag</button>
+                    <img src="assets/images/save-icon.png" alt="save-icon" class="ml-4 w-6 h-6 mt-2 cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

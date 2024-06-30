@@ -15,4 +15,11 @@
 
   .additional-info p {
     font-size: 12px;
+    color: grey; 
+  }
+
+.chip-filter-button.active {
+    background-color: black;
+    border-color: blue;
+    color: white; 
 }
