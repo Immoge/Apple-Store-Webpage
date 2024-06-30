@@ -1,0 +1,93 @@
+<div class="product-card border rounded-lg p-2 shadow-lg bg-light-gray">
+  <div class="w-full h-48 overflow-hidden rounded-t-lg">
+    <img [src]="selectedColorImageUrl" alt="{{ product.id }}" class="w-full h-full object-contain">
+  </div>
+  <div class="p-2">
+    <div class="mt-2">
+      <!-- Color Name and Options Section -->
+      <div class="mt-1">
+        <p class="color-text">{{ selectedColorName }}</p>
+        <div class="flex space-x-2 mt-4">
+          <button *ngFor="let color of product.colors" 
+                  (click)="selectColor(color)" 
+                  class="w-6 h-6 rounded-full border-4" 
+                  [ngStyle]="{
+                    'background-color': getColor(color.name),
+                    'border-color': selectedColorImageUrl === color.imageUrl ? 'white' : 'transparent',
+                    'outline': selectedColorImageUrl === color.imageUrl ? '2px solid blue' : 'none'
+                  }">
+          </button>
+        </div>
+      </div>
+      <!-- Chip Icon Section -->
+      <div class="mt-4">
+        <img [src]="chipIconUrl" alt="{{ product.chip }}" class="w-12 h-12">
+      </div>
+      <!-- Specifications and Features Section -->
+      <div class="mt-2">
+        <ul class="product-spec-font">
+          <li *ngFor="let spec of product.specs">{{ spec }}</li>
+        </ul>
+        <ul class="product-feature-font mt-2">
+          <li *ngFor="let feature of product.features" class="text-sm mb-2">{{ feature }}</li>
+        </ul>
+      </div>
+      <!-- Price Section -->
+      <div class="mt-4">
+        <p class="text-xl font-medium text-gray-900">RM {{ product.price | number:'1.2-2' }}</p>
+        <p class="text-sm font-medium text-gray-500 mt-2">or</p>
+        <p class="text-xl font-medium text-gray-900 mt-2">RM {{ (product.price / 24) | number:'1.2-2' }}/mo. for <br>24 mo.*</p>
+        <!-- New Section for Installment Options and Trade-in -->
+        <div class="mt-2">
+          <a href="#" (click)="showPopout()" class="text-blue-600 hover:underline text-sm flex items-center">
+            Explore monthly installment options
+            <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+          </a>
+          <div class="mt-4">
+            <p class="text-sm font-semibold text-gray-900">Add a trade-in</p>
+            <p class="text-sm text-gray-700">Get credit towards a new Mac when you trade in your eligible computer. Or recycle it for free.**</p>
+          </div>
+          <a href="#" class="text-blue-600 hover:underline text-sm flex items-center">
+            Get started
+            <img src="assets/images/plus-icon.png" alt="plus-icon" class="ml-1 w-4 h-4">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Select Button and Additional Information -->
+    <div class="mt-4">
+      <a [routerLink]="['/product', product.id]" class="block">
+        <button class="text-white text-sm py-2 px-4 rounded-xl w-full bg-blue-600"
+                [ngStyle]="{'font-weight': 'normal'}">Select</button>
+      </a>
+      <div class="mt-4">
+        <p class="text-sm font-medium text-gray-700">Need a moment?</p>
+        <p class="text-sm text-gray-700">Keep all your selections by saving this device to Your Saves, then come back anytime and pick up right where you left off.</p>
+        <a href="#" class="text-blue-600 hover:underline text-sm flex items-center mt-2">
+          <img src="assets/images/save-icon.png" alt="save-icon" class="mr-1 w-4 h-4"> Save for later
+        </a>
+      </div>
+      <div class="mt-6">
+        <div class="flex items-center">
+          <img src="assets/images/lorry-icon.png" alt="delivery-icon" class="mr-2 w-4 h-4">
+          <div>
+            <p class="text-sm text-gray-700">Order today. Delivers to <a href="#" class="text-blue-500 underline hover:no-underline">55188</a></p>
+            <p class="text-sm font-medium text-gray-900">Wed 03/07/2024 — Free</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <div class="flex items-center">
+          <img src="../../assets/images/apple-bag-icon.jpeg" alt="pickup-icon" class="mr-2 w-4 h-4">
+          <div>
+            <p class="text-sm text-gray-700">Order now. Pick up, in store:</p>
+            <p class="text-sm font-medium text-gray-900">Today <span class="font-normal">at </span> <a href="#" class="text-blue-500 underline hover:no-underline">Apple The Exchange TRX</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include Popout Component -->
+<app-popout *ngIf="popoutService.isVisible$ | async"></app-popout>

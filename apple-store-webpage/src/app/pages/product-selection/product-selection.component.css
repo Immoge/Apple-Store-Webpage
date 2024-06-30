@@ -1,0 +1,18 @@
+.global-margin {
+    margin-left: 190px;  
+    margin-right: 190px; 
+  }
+  
+  .small-symbols {
+    font-size: 0.6em;
+    vertical-align: text-top;
+  }
+
+  .apple-care-margin {
+    margin-left: 360px;  
+    margin-right: 360px; 
+  }
+
+  .additional-info p {
+    font-size: 12px;
+}
