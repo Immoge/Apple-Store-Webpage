@@ -8,7 +8,7 @@ MODE FAIR HOME ASSESSMENT
 ## Selection Page-2
 ![Screenshot 2](https://github.com/Immoge/Apple-Store-Webpage/blob/main/screenshots/product-selection-2.png)
 ## Selection Page-3
-![Screenshot 3](https://github.com/Immoge/Apple-Store-Webpage/blob/main/screenshots/product-selection-2.png)
+![Screenshot 3](https://github.com/Immoge/Apple-Store-Webpage/blob/main/screenshots/product-selection-3.png)
 ## Detail Page-1
 ![Screenshot 4](https://github.com/Immoge/Apple-Store-Webpage/blob/main/screenshots/product-details-1.png)
 ## Detail Page-2
