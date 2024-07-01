@@ -4,7 +4,6 @@
   </div>
   <div class="p-2">
     <div class="mt-2">
-      <!-- Color Name and Options Section -->
       <div class="mt-1">
         <p class="color-text">{{ selectedColorName }}</p>
         <div class="flex space-x-2 mt-4">
@@ -19,11 +18,9 @@
           </button>
         </div>
       </div>
-      <!-- Chip Icon Section -->
       <div class="mt-4">
         <img [src]="chipIconUrl" alt="{{ product.chip }}" class="w-12 h-12">
       </div>
-      <!-- Specifications and Features Section -->
       <div class="mt-2">
         <ul class="product-spec-font">
           <li *ngFor="let spec of product.specs">{{ spec }}</li>
@@ -32,12 +29,10 @@
           <li *ngFor="let feature of product.features" class="text-sm mb-2">{{ feature }}</li>
         </ul>
       </div>
-      <!-- Price Section -->
       <div class="mt-4">
         <p class="text-xl font-medium text-gray-900">RM {{ product.price | number:'1.2-2' }}</p>
         <p class="text-sm font-medium text-gray-500 mt-2">or</p>
         <p class="text-xl font-medium text-gray-900 mt-2">RM {{ (product.price / 24) | number:'1.2-2' }}/mo. for <br>24 mo.*</p>
-        <!-- New Section for Installment Options and Trade-in -->
         <div class="mt-2">
           <a href="#" (click)="showPopout()" class="text-blue-600 hover:underline text-sm flex items-center">
             Explore monthly installment options
@@ -54,7 +49,6 @@
         </div>
       </div>
     </div>
-    <!-- Select Button and Additional Information -->
     <div class="mt-4">
       <a [routerLink]="['/product', product.id]" class="block">
         <button class="text-white text-sm py-2 px-4 rounded-xl w-full bg-blue-600"

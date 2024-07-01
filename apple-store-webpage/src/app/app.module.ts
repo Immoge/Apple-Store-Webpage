@@ -19,14 +19,14 @@ import { PopoutService } from './services/popout.service'; // Import PopoutServi
     ProductSelectionComponent,
     ProductDetailComponent,
     ProductCardComponent,
-    PopoutComponent // Declare PopoutComponent
+    PopoutComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, // Ensure HttpClientModule is imported here
+    HttpClientModule, 
   ],
-  providers: [PopoutService], // Provide PopoutService
+  providers: [PopoutService], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
